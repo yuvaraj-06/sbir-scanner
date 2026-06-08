@@ -234,7 +234,7 @@ function renderTopics(topics) {
               <a href="https://www.dodsbirsttr.mil/topics-app/" target="_blank">
                 <button class="action-btn btn-primary">View on DSIP</button>
               </a>
-              <button class="action-btn btn-secondary" onclick="event.stopPropagation(); startDraft('${t.id}', '${t.title.replace(/'/g,'\\'')}')">
+              <button class="action-btn btn-secondary" onclick="event.stopPropagation(); startDraft(this.dataset.id, this.dataset.title)" data-id="${t.id}" data-title="${t.title}">
                 Start Draft Proposal
               </button>
             </div>
